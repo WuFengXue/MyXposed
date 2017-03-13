@@ -15,6 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Easy example which makes the status bar clock red and adds a smiley" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="30" />
     </application>
 
 </manifest>
