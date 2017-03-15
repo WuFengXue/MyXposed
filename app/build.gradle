@@ -21,5 +21,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    provided files('lib/XposedBridgeApi-30.jar')
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    provided 'de.robv.android.xposed:api:82'
+    provided 'de.robv.android.xposed:api:82:sources'
 }
