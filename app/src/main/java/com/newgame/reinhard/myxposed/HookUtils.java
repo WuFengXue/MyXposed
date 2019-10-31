@@ -32,7 +32,7 @@ public class HookUtils implements IXposedHookLoadPackage, IXposedHookZygoteInit 
     @Override
     public void initZygote(StartupParam startupParam) throws Throwable {
         if (ENABLE_LOG_HOOKER) {
-            hookXpApi(startupParam);
+            hookXposedFrameworkApi(startupParam);
         }
     }
 
@@ -80,7 +80,7 @@ public class HookUtils implements IXposedHookLoadPackage, IXposedHookZygoteInit 
      * <p>
      * 钩子的目标类和方法名，可在 Xposed Installer 的日志中查看
      */
-    private void hookXpApi(StartupParam param) {
+    private void hookXposedFrameworkApi(StartupParam param) {
         hookXpFindAndHookMethod();
         hookXpFindAndHookConstructor();
         hookXpHookAllMethods();
